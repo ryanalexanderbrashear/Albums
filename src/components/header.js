@@ -1,17 +1,35 @@
 //Import libraries for making a component
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 //Make a component
-const Header = () => { //Compnents should be named the same as the file they are in
-    const { textStyle } = styles;
+const Header = (props) => { //Compnents should be named the same as the file they are in
+    const { textStyle, viewStyle } = styles; //Pulling the styles we want to use from the styles object
 
-    return <Text style={textStyle}>Albums!</Text>; //Using the style prop to set the styles
+    return (
+        //Using the style prop to set the styles
+        //You can also use props to make components dynamic (setting the header text below)
+        <View style={viewStyle}>
+            <Text style={textStyle}>{props.headerText}</Text>
+        </View>
+    );
 };
 
 const styles = { //Styling for components goes within the component file
     textStyle: {
         fontSize: 20
+    },
+    viewStyle: {
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 75,
+        paddingTop: 15,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
     }
 };
 

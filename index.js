@@ -7,7 +7,8 @@ import Header from './src/components/header'; //Import the Header component by u
 //Create a component
 const App = () => { //App is the name of our component here, ONLY MAKE ONE COMPONENT PER FILE
     return (
-        <Header /> //JSX -> Extension of JS used to create React components. Also, header is self-closing tag so we don't need a closing </Header> and can use the self closing tag syntax
+        <Header headerText={'Albums'} /> //JSX -> Extension of JS used to create React components. Also, header is self-closing tag so we don't need a closing </Header> and can use the self closing tag syntax.
+        //This is also an example of passing in a props object to a component.
     );
 };
 
