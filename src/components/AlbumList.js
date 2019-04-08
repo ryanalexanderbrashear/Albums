@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 //Importing Axios to carry out HTTP calls
 import Axios from 'axios';
@@ -31,9 +31,9 @@ class AlbumList extends Component { //Class-based components extend component to
 
         return (
             //To be able to interact with Javascript objects within JSX, they must be enclosed within curly braces
-            <View>
+            <ScrollView>
                 {this.renderAlbums()}
-            </View>
+            </ScrollView>
         );
     }
 }

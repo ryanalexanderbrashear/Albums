@@ -11,7 +11,8 @@ const App = () => { //App is the name of our component here, ONLY MAKE ONE COMPO
         //JSX -> Extension of JS used to create React components. Also, header is self-closing tag so we don't need a closing </Header> and can use the self closing tag syntax.
         //This is also an example of passing in a props object to a component.
         //Only one JSX object can be returned when creating a component, so if we want to use multiple components we need to wrap them in a view tag
-        <View>
+        //Parent element must have a style of flex: 1 to use all of the device content area 
+        <View style={{ flex: 1 }}> 
             <Header headerText={'Albums'} />
             <AlbumList />
         </View>
