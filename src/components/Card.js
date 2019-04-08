@@ -2,10 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import { declaredPredicate } from '@babel/types';
 
-const Card = () => {
+const Card = (props) => {
     return (
-        <View style={styles.containerStyle}>
-            
+        //Components automatically receive all children that are placed within them (see AlbumDetail) as part of the props that are passed to the component
+        <View style={styles.containerStyle}> 
+            {props.children} 
         </View>
     );
 };
@@ -20,7 +21,7 @@ const styles = {
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
-        elevation, 1,
+        elevation: 1,
         marginLeft: 5,
         marginRight: 5,
         marginTop: 10 
