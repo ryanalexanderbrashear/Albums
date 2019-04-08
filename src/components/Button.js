@@ -3,11 +3,13 @@ import { Text, TouchableOpacity } from 'react-native';
 
 const Button = (props) => {
     const { buttonStyle, textStyle } = styles;
+    const { title, onPress } = props;
 
     return (
-        <TouchableOpacity style={buttonStyle}>
+        //To handle a touch event to a button, we can use the onPress prop to create a handler
+        <TouchableOpacity onPress={onPress} style={buttonStyle}>
             <Text style={textStyle}>
-                {props.title}
+                {title}
             </Text>
         </TouchableOpacity>
     );
@@ -25,7 +27,7 @@ const styles = {
     buttonStyle: {
         flex: 1,
         alignSelf: 'stretch',
-        backgroundColor: 'fff',
+        backgroundColor: '#fff',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: '#007aff',
